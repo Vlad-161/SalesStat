@@ -1,18 +1,18 @@
 package ru.netology.stats.sales.statsservice;
 
 public class StatsService {
-    public int allSales(int[] sales) {
+    public long allSales(int[] sales) {
         int summ = 0;
-        for (int sale : sales) {
+        for (long sale : sales) {
             summ += sale;
         }
         return summ;
     }
 
-    public int averSalesMonth(int[] sales) {
+    public long averSalesMonth(int[] sales) {
         int numberSale = sales.length;
-        int summ = allSales (sales);
-        int averMonth = summ / numberSale;
+        long summ = allSales (sales);
+        long averMonth = summ / numberSale;
         return averMonth;
     }
 
@@ -41,7 +41,7 @@ public class StatsService {
     }
 
     public int underAverSalesMonth(int[] sales) {
-        int averSumm = averSalesMonth(sales);
+        long averSumm = averSalesMonth(sales);
         int underAverSalesMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -53,7 +53,7 @@ public class StatsService {
     }
 
     public int overAverSalesMonth(int[] sales) {
-        int averSumm = averSalesMonth(sales);
+        long averSumm = averSalesMonth(sales);
         int overAverSalesMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {

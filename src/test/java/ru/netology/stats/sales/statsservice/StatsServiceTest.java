@@ -9,9 +9,9 @@ public class StatsServiceTest {
     void CalcAllSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.allSales(sales);
+        long actual = service.allSales(sales);
 
-        int expected = 180;
+        long expected = 180;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -21,7 +21,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = service.averSalesMonth(sales);
+        long actual = service.averSalesMonth(sales);
         int expected = 15;
 
         Assertions.assertEquals(expected, actual);
