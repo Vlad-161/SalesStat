@@ -8,7 +8,7 @@ public class StatsServiceTest {
     @Test
     void CalcAllSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long actual = service.allSales(sales);
 
         long expected = 180;
@@ -19,7 +19,7 @@ public class StatsServiceTest {
     @Test
     void calcAverSalesMonth() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long actual = service.averSalesMonth(sales);
         int expected = 15;
@@ -31,8 +31,8 @@ public class StatsServiceTest {
     @Test
     void CalcMinSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.minSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.minSales(sales);
 
         int expected = 9;
 
@@ -42,8 +42,8 @@ public class StatsServiceTest {
     @Test
     void CalcMaxSales() {
         StatsService service = new StatsService();
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.maxSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.maxSales(sales);
 
         int expected = 8;
 
@@ -54,9 +54,9 @@ public class StatsServiceTest {
     void CalcUnderAverSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = service.underAverSalesMonth(sales);
+        long actual = service.underAverSalesMonth(sales);
 
         int expected = 5;
 
@@ -67,9 +67,9 @@ public class StatsServiceTest {
     void CalcOverAverSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int actual = service.overAverSalesMonth(sales);
+        long actual = service.overAverSalesMonth(sales);
 
         int expected = 5;
 
